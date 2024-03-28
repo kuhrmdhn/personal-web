@@ -21,7 +21,7 @@ type projectItem = {
 
 export default function ProjectCard({ item }: projectItem) {
     return (
-        <div className='h-[450px] w-72 sm:w-80 border border-neutral-300 rounded-xl'>
+        <div className='h-[450px] w-72 sm:w-80 border border-neutral-300 rounded-xl text-white'>
             <section>
                 <Image className='rounded-t-xl' alt={item.title} src={item.source} height={250} width={400} />
             </section>
