@@ -6,8 +6,8 @@ export default function AboutPage() {
   const onClick = () => window.location.href = "#skill"
 
   return (
-    <section id='about' className='w-full min-h-max h-max md:h-[50svh] lg:h-[75svh] flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-0'>
-      <div className='h-max w-max md:w-1/3 text-white text-lg sm:text-3xl lg:text-5xl font-bold flex flex-col items-center md:block'>
+    <section id='about' className='w-full min-h-max h-max md:h-[50svh] lg:h-[75svh] text-white flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-0'>
+      <div className='h-max w-max md:w-1/3 text-lg sm:text-3xl lg:text-5xl font-bold flex flex-col items-center md:block'>
         <h6 className='text-mainBlue text-sm md:text-base'>ABOUT ME</h6>
         <h1>Front End</h1>
         <h1>Web Developer</h1>
