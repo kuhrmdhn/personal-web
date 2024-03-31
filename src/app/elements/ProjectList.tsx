@@ -19,7 +19,7 @@ export default function ProjectList() {
             source: "/image/notes-preview.webp",
             btn1Text: "Github",
             btn2Text: "Live View",
-            description: "The web application is built with React.js + TypeScript, Chakra UI, Chakra UI Icons, Tailwind CSS, and React Router DOM. It's a note-taking application that utilizes localStorage as a storage mechanism for notes, allowing CRD (Create, Read, Delete) operations.",
+            description: "The web application is built with React.js + TypeScript, Chakra UI, Chakra UI Icons, Tailwind CSS, and React Router DOM. It's a note-taking application that utilizes localStorage as a storage mechanism for notes, allowing CRUD (Create, Read, Update, Delete) operations.",
             height: 100,
             width: 250,
             github: "https://github.com/kuhrmdhn/notes-apps",
