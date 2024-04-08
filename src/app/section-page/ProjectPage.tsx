@@ -3,7 +3,7 @@ import ProjectList from '../elements/ProjectList'
 
 export default function ProjectPage() {
   return (
-    <section id='project' className='lg:h-[100svh] sm:h-max mt-3'>
+    <section id='project' className='h-max lg:min-h-[100svh] mt-3'>
       <div className='h-36 md:h-44 w-full text-white text-2xl lg:text-4xl font-bold flex flex-col items-center justify-center'>
         <h6 className='text-mainBlue text-xs md:text-sm'>My Project</h6>
         <h3>Completed Project</h3>
