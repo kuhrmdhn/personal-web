@@ -4,7 +4,7 @@ import ProjectCard from '../components/ui/project-card';
 export default function ProjectList() {
     const projects = [
         {
-            title: "GAMOST 11",
+            title: "GAMOST Web Album",
             source: "/image/gamost11-preview.webp",
             btn1Text: "Github",
             btn2Text: "Live View",
@@ -15,7 +15,7 @@ export default function ProjectList() {
             live: "https://gamost11.vercel.app/"
         },
         {
-            title: "Notes",
+            title: "Notes Web App",
             source: "/image/notes-preview.webp",
             btn1Text: "Github",
             btn2Text: "Live View",
