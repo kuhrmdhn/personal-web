@@ -26,7 +26,8 @@ export default function ProjectCard({ item }: projectItem) {
                 <Image className='rounded-t-xl' alt={item.title} src={item.source} height={250} width={400} />
             </section>
             <section className="h-3/5 px-3 pt-3 flex justify-around flex-col">
-                <div className='overflow-y-auto webkit-hide h-3/4 text-justify'>
+                <h3 className="font-extrabold text-lg">{item.title}</h3>
+                <div className='overflow-y-auto webkit-hide h-2/3 text-justify text-sm font-light'>
                     <p>{item.description}</p>
                 </div>
                 <div className='h-max flex gap-3 justify-center'>
