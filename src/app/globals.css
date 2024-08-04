@@ -2,27 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*,html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: #000
-}
-
-.webkit-hide::-webkit-scrollbar {
-  width: 0;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    background: #000;
+    color: #fff;
+    scroll-behavior: smooth;
 }
