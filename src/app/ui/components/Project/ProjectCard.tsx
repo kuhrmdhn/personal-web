@@ -2,7 +2,6 @@ import Image from 'next/image'
 import React from 'react'
 import ProjectStackItem from './ProjectStackItem'
 import TailwindConnectButton from '../../aceternityUI/TailwindConnectButton'
-import LitUpButton from '../../aceternityUI/LitUpButton'
 import { Project } from '@/types/ProjectTypes'
 
 type Props = {
