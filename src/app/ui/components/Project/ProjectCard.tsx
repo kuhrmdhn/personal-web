@@ -39,7 +39,7 @@ export default function ProjectCard({ project }: Props) {
             </div>
             <div className='flex justify-end items-end gap-3'>
                 <TailwindConnectButton text="Github" onClick={() => visitPage(github_url)} />
-                <LitUpButton text="Demo" onClick={() => visitPage(demo_url)} />
+                <TailwindConnectButton text="Demo" onClick={() => visitPage(demo_url)} />
             </div>
         </section>
     )

@@ -4,7 +4,7 @@ import AOVFadeUp from '../ui/framer-motion/Animate On View/AOVFadeUp'
 export default function AboutPage() {
   return (
     <AOVFadeUp>
-      <section id='about' className='w-full min-h-[75svh] h-max text-white flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-0'>
+      <section id='about' className='w-full min-h-[75svh] h-max text-white flex flex-col sm:flex-row justify-center items-center gap-7 sm:gap-0 pt-16'>
         <div className='h-max w-max md:w-1/3 text-lg sm:text-3xl lg:text-5xl font-bold flex flex-col items-center md:block'>
           <h1 className='text-mainBlue text-sm md:text-base'>ABOUT ME</h1>
           <h2>Front End</h2>
