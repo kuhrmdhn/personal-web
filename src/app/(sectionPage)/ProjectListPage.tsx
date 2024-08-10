@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import ProjectCard from '../ui/components/Project/ProjectCard'
 import AOVFadeUp from '../ui/framer-motion/Animate On View/AOVFadeUp'
 import { projectRouter } from '@/database/projectListRouter'
-import LitUpButton from '../ui/aceternityUI/LitUpButton'
+import TailwindConnectButton from '../ui/aceternityUI/TailwindConnectButton'
 
 export default function ProjectListPage() {
     const { projectList } = useProjectStore()
@@ -36,7 +36,7 @@ export default function ProjectListPage() {
                 </div>
                 {
                     projectList.length > fetchLimit &&
-                    <LitUpButton
+                    <TailwindConnectButton
                         className="mt-7"
                         text='See More Project'
                         onClick={fetchMoreProject}
