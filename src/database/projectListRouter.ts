@@ -5,7 +5,7 @@ export const projectRouter = {
     async getProjectList(limit?: number) {
         try {
             if (!limit) {
-                limit = 3
+                limit = 2
             }
             const { data: limitedProject, error } = await supabase.from("project_list").select().range(0, limit)
             if (error) throw new Error(error.message)

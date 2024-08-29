@@ -8,7 +8,7 @@ import TailwindConnectButton from '../ui/aceternityUI/TailwindConnectButton'
 
 export default function ProjectListPage() {
     const { projectList } = useProjectStore()
-    const [fetchLimit, setFetchLimit] = useState(3)
+    const [fetchLimit, setFetchLimit] = useState(2)
     const { getProjectList } = projectRouter
     function fetchMoreProject() {
         const newLimit = fetchLimit + 3
