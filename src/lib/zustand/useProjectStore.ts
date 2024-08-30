@@ -2,9 +2,13 @@ import { Project } from "@/types/ProjectTypes";
 import { create } from "zustand";
 
 type Store = {
-    projectList: Project[]
+    projectList: Project[],
+    setProjectList: (params: Project[]) => void
 }
 
 export const useProjectStore = create<Store>()((set) => ({
-    projectList: []
+    projectList: [],
+    setProjectList(projectList) {
+        set({ projectList })
+    },
 }))

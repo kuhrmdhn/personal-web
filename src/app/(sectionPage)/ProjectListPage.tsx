@@ -7,10 +7,11 @@ import { projectRouter } from '@/database/projectListRouter'
 import TailwindConnectButton from '../ui/aceternityUI/TailwindConnectButton'
 
 export default function ProjectListPage() {
-    const { projectList } = useProjectStore()
+    const { projectList, setProjectList } = useProjectStore()
     const [fetchLimit, setFetchLimit] = useState(2)
     const { getProjectList } = projectRouter
     function fetchMoreProject() {
+        setProjectList([])
         const newLimit = fetchLimit + 3
         getProjectList(newLimit)
         setFetchLimit(newLimit)
@@ -18,12 +19,12 @@ export default function ProjectListPage() {
 
     return (
         <AOVFadeUp>
-            <section id="project" className='w-full min-h-[50svh] h-max pt-16 flex flex-col justify-center items-center'>
-                <div className='h-max w-full text-lg sm:text-xl lg:text-3xl font-bold flex flex-col items-center justify-center mb-5'>
+            <section id="project" className='w-full min-h-[100svh] pt-16 flex flex-col justify-center items-center'>
+                <div className='h-max w-full text-lg sm:text-xl lg:text-3xl font-bold flex flex-col items-center justify-center mb-auto'>
                     <h1 className='text-mainBlue text-sm md:text-base'>MY PROJECT</h1>
                     <h2>My Completed Project</h2>
                 </div>
-                <div className='w-full h-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-items-center gap-y-3'>
+                <div className='w-full h-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-items-center gap-y-3 mt-5'>
                     {
                         projectList.map((project: Project, index: number) => (
                             <AOVFadeUp key={index} delay={(index + 1) / 10}>
