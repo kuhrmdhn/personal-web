@@ -2,7 +2,6 @@ import { Navigation } from "@/types/NavigationType"
 import { useCallback, useEffect, useState } from "react"
 import ToggleButton from "../../element/ToggleButton"
 import { motion } from "framer-motion"
-import ScaleOnHover from "../../framer-motion/Animation/ScaleOnHover"
 import NavItem from "./NavItem"
 
 export default function Sidebar({ navigation }: { navigation: Navigation[] }) {

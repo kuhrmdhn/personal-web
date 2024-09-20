@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --main-blue: #60a5fa
+}
+
 *, html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+*::selection {
+    text-decoration: underline;
+    text-decoration-color: var(--main-blue);
+    -moz-text-decoration-color: var(--main-blue);
 }
 
 html {
