@@ -32,7 +32,7 @@ export default function NavItem({ navigation }: Props) {
 
     return (
         <ScaleOnHover>
-            <li className="after:absolute after:bg-white after:h-1 after:w-4 after:-bottom-1 after:left-0 after:scale-x-0 after:invisible after:hover:scale-x-100 after:hover:visible w-12 lg:w-20 underline-offset-4 text-left rounded-md text-xs lg:text-base relative after:duration-500">
+            <li className="after:absolute after:bg-white after:h-1 after:w-4 after:-bottom-1 after:right-1/2 after:scale-x-0 after:invisible after:hover:scale-x-100 after:hover:visible after:translate-x-1/2 w-12 lg:w-20 underline-offset-4 rounded-md text-xs lg:text-base relative after:duration-500 text-center">
                 <a href={link}>{navigate}</a>
             </li>
         </ScaleOnHover>
