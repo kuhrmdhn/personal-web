@@ -32,7 +32,7 @@ export default function NavItem({ navigation }: Props) {
 
     return (
         <ScaleOnHover>
-            <li className="link-underline w-12 lg:w-20 underline-offset-4 rounded-md text-xs lg:text-base relative text-center">
+            <li className="link-underline w-12 lg:w-20 underline-offset-4 rounded-md text-xs lg:text-base relative text-center font-semibold">
                 <a href={link}>{navigate}</a>
             </li>
         </ScaleOnHover>
