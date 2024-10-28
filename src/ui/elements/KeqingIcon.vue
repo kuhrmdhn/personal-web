@@ -1,11 +1,11 @@
 <template>
-  <div class="h-full w-full">
+  <div class="w-1/5 h-32 -rotate-90">
     <video
       muted
       loop
       autoplay
       src="/video/keqing.mp4"
-      class="-rotate-90 bg-blend-screen w-full overflow-hidden"
+      class="w-full overflow-hidden"
     />
   </div>
 </template>

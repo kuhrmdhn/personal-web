@@ -2,28 +2,42 @@
   <div
     id="navigation"
     :class="[
-      'fixed z-20 bg-silverWhite h-[100svh] w-full left-0 pt-16 duration-500 flex flex-col lg:flex-row justify-end lg:justify-center items-center',
+      'fixed z-20 bg-silverWhite h-[100svh] w-full left-0 pt-16 duration-500 flex flex-col sm:flex-row justify-end sm:justify-around lg:justify-center items-center',
       isActive ? 'top-0' : '-top-[100svh]',
     ]"
   >
-    <nav class="h-1/2 lg:h-3/5 w-5/6 lg:w-1/3 pl-7 relative flex">
-      <h3 class="-rotate-90 absolute top-5 -left-5 font-bold text-sm lg:text-base">Menu</h3>
+    <nav class="h-1/2 lg:h-3/5 w-5/6 sm:w-1/3 pl-7 relative flex">
+      <h3
+        class="-rotate-90 absolute top-5 -left-5 font-bold text-sm lg:text-base"
+      >
+        Menu
+      </h3>
       <ul class="flex flex-col gap-5 text-2xl lg:text-5xl font-extrabold">
         <li
+          class="hover:scale-90 duration-300"
           v-for="item in navigationItems"
           :key="item.id"
-          :style="{ animationDelay: item.id * 100 + 'ms' }"
-          :class="[isActive && 'fall', 'navigation-hover w-fit hover:scale-90 hover:font-light duration-300']"
           @click="toggleMenu"
         >
-          <a :href="item.link">
-            {{ item.text }}
-          </a>
+          <NavigationItem
+            :style="{ animationDelay: item.id * 100 + 'ms' }"
+            :text="item.text"
+            :class="['hover:font-thin', isActive && 'fall']"
+            :url="item.link"
+          />
         </li>
       </ul>
     </nav>
-    <section :class="[isActive && 'fall image-fall','h-2/5 lg:h-full w-fit lg:w-1/3 flex items-end justify-end lg:items-end']">
-      <img src="/images/profile-2.jpg" class="h-full lg:h-auto lg:w-full aspect-auto" />
+    <section
+      :class="[
+        isActive && 'fall image-fall',
+        'h-2/5 lg:h-full w-fit bg-green-200 sm:w-1/3 flex items-end justify-end lg:items-end',
+      ]"
+    >
+      <img
+        src="/images/profile-2.jpg"
+        class="h-full lg:h-auto lg:w-full aspect-auto"
+      />
     </section>
   </div>
 </template>
@@ -31,6 +45,7 @@
 <script setup>
 import { useActiveMenu } from "@/store/useActiveMenu";
 import { storeToRefs } from "pinia";
+import NavigationItem from "../atoms/NavigationItem.vue";
 
 const store = useActiveMenu();
 const { isActive } = storeToRefs(store);
