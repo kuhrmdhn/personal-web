@@ -31,7 +31,7 @@
     <section
       :class="[
         isActive && 'fall image-fall',
-        'h-2/5 lg:h-full w-fit bg-green-200 sm:w-1/3 flex items-end justify-end lg:items-end',
+        'h-2/5 lg:h-full w-fit sm:w-1/3 flex items-end justify-end lg:items-end',
       ]"
     >
       <img
