@@ -19,6 +19,7 @@
 .flip {
     animation: flip 200ms ease-in-out 300ms forwards;
     transform: rotateX(90deg);
+    -webkit-animation: flip 200ms ease-in-out 300ms forwards;
 }
 
 .to-right {
