@@ -8,15 +8,15 @@ import OnView from "../atoms/OnView.vue";
     id="contact"
     class="h-[100svh] sm:h-[50svh] lg:h-[100svh] w-full pt-16 flex flex-col sm:flex-row items-center justify-around"
   >
-    <OnView id="contactImage" triggerId="contactImage" class="h-full w-5/6 lg:w-2/5 flex justify-center items-center">
+    <OnView id="contactImage" triggerId="contactImage" class="h-1/2 sm:h-full w-5/6 lg:w-2/5 flex justify-center items-center">
       <img
         src="/images/profile-3.jpg"
         alt="Kukuh Ardi Ramadhan Profile"
-        class="h-3/4 aspect-auto rounded-lg hover:scale-95 duration-300 to-right"
+        class="h-full sm:h-3/4 aspect-auto rounded-lg hover:scale-95 duration-300 to-right"
       />
     </OnView>
     <div
-      class="h-full w-5/6 lg:w-2/5 flex flex-col justify-center"
+      class="h-2/5 sm:h-full w-5/6 lg:w-2/5 flex flex-col justify-center"
     >
       <OnView id="contactHeading" triggerId="contactHeading" class="lg:pl-5 flex flex-col gap-5">
         <h3 class="text-3xl lg:text-5xl flip">
