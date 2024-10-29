@@ -30,7 +30,7 @@ onMounted(() => {
   >
     <OnView triggerId="skillList" v-for="skill in skillLists" :key="skill.id">
       <img
-        class="h-10 w-10 fall cursor-pointer hover:scale-125 duration-300 rounded-md"
+        class="h-8 sm:h-10 w-8 sm:w-10 fall cursor-pointer hover:scale-125 duration-300 rounded-md"
         :title="skill.name"
         :src="skill.image"
         :alt="skill.name"

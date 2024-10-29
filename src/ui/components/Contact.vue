@@ -6,7 +6,7 @@ import OnView from "../atoms/OnView.vue";
 <template>
   <section
     id="contact"
-    class="h-[100svh] sm:h-[50svh] lg:h-[100svh] w-full pt-16 flex flex-col sm:flex-row items-center justify-around"
+    class="min-h-[35rem] h-[100svh] sm:h-[50svh] lg:h-[100svh] w-full pt-16 flex flex-col sm:flex-row items-center justify-around"
   >
     <OnView id="contactImage" triggerId="contactImage" class="h-1/2 sm:h-full w-5/6 lg:w-2/5 flex justify-center items-center">
       <img

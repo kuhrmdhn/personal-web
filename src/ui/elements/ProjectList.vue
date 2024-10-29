@@ -1,16 +1,15 @@
 <template>
   <section
-    id="projectContainer"
-    class="h-4/5 w-full flex gap-7 items-center overflow-x-auto lg:py-7 px-10 project-list"
+    class="h-4/5 w-full flex gap-7 items-center overflow-x-auto lg:py-7 px-4 sm:px-10 project-list"
   >
     <OnView
-      triggerId="projectContainer"
+      triggerId="project"
       v-for="project in projectList"
       :key="project.id"
     >
       <div
         :style="{ animationDelay: (project.id + 1) * 100 + 'ms' }"
-        class="to-right h-96 lg:h-96 w-80 p-2 flex-none bg-white border-2 border-gray-100 shadow-md rounded-md flex flex-col justify-between hover:shadow-lg duration-300"
+        class="to-right h-80 sm:h-96 w-72 sm:w-80 p-2 flex-none bg-white border-2 border-gray-100 shadow-md rounded-md flex flex-col justify-between hover:shadow-lg duration-300"
       >
         <img
           class="h-1/2 object-cover object-center rounded-md"
@@ -18,8 +17,8 @@
           :alt="project.name"
         />
         <section class="h-1/2 w-full">
-          <h1 class="font-semibold text-lg">{{ project.name }}</h1>
-          <p class="font-thin text-sm text-justify">
+          <h1 class="font-semibold text-base sm:text-lg">{{ project.name }}</h1>
+          <p class="font-thin text-xs sm:text-sm text-justify">
             {{ project.description }}
           </p>
         </section>
@@ -27,12 +26,12 @@
           <span
             v-for="stack in project.stacks"
             :key="stack"
-            class="w-fit h-fit flex-none bg-gray-200 px-2 py-1 rounded"
+            class="w-fit h-fit text-xs sm:text-sm flex-none bg-gray-200 px-2 py-1 rounded"
           >
             {{ stack }}
           </span>
         </section>
-        <section class="h-14 w-full flex gap-5 items-center justify-end pr-5">
+        <section class="h-14 w-full flex gap-5 items-center justify-end pr-5 text-xs sm:text-sm">
           <a
             class="bg-gray-500 text-white px-3 py-2 rounded-lg"
             :href="project.demo_url"
