@@ -8,7 +8,7 @@
       <Logo />
       <KeqingIcon />
     </div>
-    <nav id="footerNavigation" class="w-full sm:w-1/2 h-3/5 sm:h-3/4 flex justify-evenly items-center overflow-hidden">
+    <nav id="footerNavigation" class="w-full sm:w-1/2 h-3/5 sm:h-3/5 flex justify-evenly overflow-hidden">
       <div
         class="w-2/5 h-3/4 flex flex-col justify-between items-center"
       >

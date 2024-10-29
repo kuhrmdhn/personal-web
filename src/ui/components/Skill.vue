@@ -6,12 +6,12 @@ import SkillList from "../elements/SkillList.vue";
 <template>
   <section
     id="skills"
-    class="h-[65svh] sm:h-[40svh] lg:h-[50svh] w-full pt-16 flex flex-col sm:flex-row justify-around items-center overflow-hidden"
+    class="min-h-[20rem] h-[65svh] sm:h-[40svh] w-full pt-6 flex flex-col sm:flex-row justify-around items-center overflow-hidden"
   >
     <OnView
     id="skillHeading"
       triggerId="skillHeading"
-      class="h-2/5 lg:h-5/6 w-11/12 sm:w-1/3 flex flex-col gap-5 justify-center text-justify"
+      class="h-1/3 lg:h-5/6 w-11/12 sm:w-1/3 flex flex-col gap-5 justify-center text-justify"
     >
       <h1 class="flip text-3xl lg:text-5xl">
         My Skill
@@ -28,5 +28,3 @@ import SkillList from "../elements/SkillList.vue";
     </div>
   </section>
 </template>
-
-<style scoped></style>
