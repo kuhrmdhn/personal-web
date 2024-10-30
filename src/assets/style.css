@@ -17,20 +17,28 @@
 }
 
 .flip {
-    animation: flip 200ms ease-in-out 300ms forwards;
+    animation: flip 200ms ease-in-out forwards;
+    animation-delay: var(--flip-delay, 300ms);
     transform: rotateX(90deg);
-    -webkit-animation: flip 200ms ease-in-out 300ms forwards;
+    opacity: 0;
+    -webkit-animation: flip 200ms ease-in-out forwards;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
 }
 
 .to-right {
-    animation: toRight 1s 350ms ease-in-out forwards;
+    animation: toRight 1s ease-in-out forwards;
+    animation-delay: var(--to-right-delay, 350ms);
     position: relative;
     left: -100svw;
-    -webkit-animation: toRight 1s 350ms ease-in-out forwards;
+    -webkit-animation: toRight 1s ease-in-out forwards;
 }
 
 .fall {
     animation: fall 1s ease forwards;
+    animation-delay: var(--fall-delay, 300ms);
     position: relative;
     top: -100svh;
     opacity: 0;
@@ -38,9 +46,11 @@
 
 .to-up {
     position: relative;
-    animation: toUp 400ms 300ms ease-in-out forwards;
+    animation: toUp 400ms ease-in-out forwards;
+    animation-delay: var(--to-up-delay, 350ms);
     bottom: -100svh;
     opacity: 0;
+    -webkit-animation: toUp 400ms ease-in-out forwards;
 }
 
 @keyframes toUp {
@@ -97,9 +107,19 @@
 @keyframes flip {
     0% {
         transform: rotateX(90deg);
+        opacity: 0;
+        -webkit-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        -ms-transform: rotateX(90deg);
+        -o-transform: rotateX(90deg);
     }
 
     100% {
         transform: rotateX(0);
+        -webkit-transform: rotateX(0);
+        -moz-transform: rotateX(0);
+        -ms-transform: rotateX(0);
+        -o-transform: rotateX(0);
+        opacity: 1;
     }
 }
