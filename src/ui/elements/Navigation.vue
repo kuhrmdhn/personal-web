@@ -15,15 +15,15 @@
       <ul class="flex flex-col gap-5 text-2xl lg:text-5xl font-extrabold">
         <li
           class="hover:scale-90 duration-300"
-          v-for="item in navigationItems"
+          v-for="item in navigationData"
           :key="item.id"
           @click="toggleMenu"
         >
           <NavigationItem
             :style="{ animationDelay: item.id * 100 + 'ms' }"
-            :text="item.text"
+            :text="item.title"
             :class="['hover:font-thin', isActive && 'fall']"
-            :url="item.link"
+            :url="item.url"
           />
         </li>
       </ul>
@@ -46,18 +46,11 @@
 import { useActiveMenu } from "@/store/useActiveMenu";
 import { storeToRefs } from "pinia";
 import NavigationItem from "../atoms/NavigationItem.vue";
+import { navigationData } from "@/constant/navigation";
 
 const store = useActiveMenu();
 const { isActive } = storeToRefs(store);
 const { toggleMenu } = store;
-
-const navigationItems = [
-  { id: 1, text: "Home", link: "#home" },
-  { id: 2, text: "About", link: "#about" },
-  { id: 3, text: "Skills", link: "#skills" },
-  { id: 4, text: "Project", link: "#project" },
-  { id: 5, text: "Contact", link: "#contact" },
-];
 </script>
 
 <style scoped>

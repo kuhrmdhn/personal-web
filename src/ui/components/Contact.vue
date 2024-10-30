@@ -1,6 +1,8 @@
 <script setup>
-import ContactList from "../elements/ContactList.vue";
+import SocialMediaList from "../elements/SocialMediaList.vue";
 import OnView from "../atoms/OnView.vue";
+import SectionHeading from "../atoms/SectionHeading.vue";
+import SectionDescription from "../atoms/SectionDescription.vue";
 </script>
 
 <template>
@@ -19,15 +21,15 @@ import OnView from "../atoms/OnView.vue";
       class="h-2/5 sm:h-full w-5/6 lg:w-2/5 flex flex-col justify-center"
     >
       <OnView id="contactHeading" triggerId="contactHeading" class="lg:pl-5 flex flex-col gap-5">
-        <h3 class="text-3xl lg:text-5xl flip">
+        <SectionHeading customClass="flip">
           Contact Me
-        </h3>
-        <p class="text-justify w-full text-sm sm:text-base to-up">
+        </SectionHeading>
+        <SectionDescription customClass="to-up">
           Want to discuss or have an exciting project we can work on together?
           I'm always open to new ideas, let's chat!
-        </p>
+        </SectionDescription>
       </OnView>
-      <ContactList />
+      <SocialMediaList />
     </div>
   </section>
 </template>
