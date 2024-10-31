@@ -7,13 +7,13 @@ import SkillList from "../elements/SkillList.vue";
 
 <template>
   <section
-    id="skills"
+    id="skill"
     class="min-h-[20rem] h-[65svh] sm:h-[40svh] w-full pt-6 flex flex-col sm:flex-row justify-around items-center overflow-hidden"
   >
     <OnView
       id="skillHeading"
       triggerId="skillHeading"
-      class="h-1/3 lg:h-5/6 w-11/12 sm:w-1/3 flex flex-col gap-5 justify-center text-justify"
+      class="h-1/3 sm:h-1/2 w-11/12 sm:w-1/3 flex flex-col gap-5 justify-center text-justify"
     >
       <SectionHeading customClass="flip"> My Skill </SectionHeading>
       <SectionDescription customClass="flip">

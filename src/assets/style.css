@@ -17,11 +17,10 @@
 }
 
 .flip {
-    animation: flip 200ms ease-in-out forwards;
-    animation-delay: var(--flip-delay, 300ms);
+    animation: flip 300ms ease-in-out 300ms forwards;
     transform: rotateX(90deg);
     opacity: 0;
-    -webkit-animation: flip 200ms ease-in-out forwards;
+    -webkit-animation: flip 300ms ease-in-out 300ms forwards;
     -webkit-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);
     -ms-transform: rotateX(90deg);
@@ -29,19 +28,18 @@
 }
 
 .to-right {
-    animation: toRight 1s ease-in-out forwards;
-    animation-delay: var(--to-right-delay, 350ms);
+    animation: toRight 1s ease-in-out 300ms forwards;
     position: relative;
     left: -100svw;
-    -webkit-animation: toRight 1s ease-in-out forwards;
+    -webkit-animation: toRight 1s ease-in-out 300ms forwards;
 }
 
 .fall {
-    animation: fall 1s ease forwards;
-    animation-delay: var(--fall-delay, 300ms);
+    animation: fall 1s ease 300ms forwards;
     position: relative;
     top: -100svh;
     opacity: 0;
+    -webkit-animation: fall 1s ease 300ms forwards;
 }
 
 .to-up {
