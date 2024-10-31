@@ -8,7 +8,7 @@ import SkillList from "../elements/SkillList.vue";
 <template>
   <section
     id="skill"
-    class="min-h-[20rem] h-[65svh] sm:h-[40svh] w-full pt-6 flex flex-col sm:flex-row justify-around items-center overflow-hidden"
+    class="min-h-[20rem] h-[50svh] sm:h-[40svh] w-full pt-6 flex flex-col sm:flex-row justify-around items-center overflow-hidden"
   >
     <OnView
       id="skillHeading"
