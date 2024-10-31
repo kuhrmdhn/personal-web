@@ -1,26 +1,17 @@
 <script setup>
+import GridBackground from "../elements/GridBackground.vue";
 import RandomText from "../elements/RandomText.vue";
 </script>
 
 <template>
   <section
     id="home"
-    class="h-[100svh] w-full overflow-hidden bg-black text-silverWhite font-bold pt-16"
+    class="h-[100svh] w-full overflow-hidden bg-black text-silverWhite font-bold pt-16 relative z-0 top-0"
   >
-    <div
-      class="h-full w-full flex flex-col justify-center items-center"
-    >
+    <div class="h-full w-full flex flex-col justify-center items-center">
       <RandomText target="Kukuh Ardi Ramadhan" class="text-2xl lg:text-5xl" />
       <h2 class="text-lg lg:text-3xl fall">Frontend Web Developer</h2>
     </div>
+    <GridBackground />
   </section>
 </template>
-
-<style scoped>
-.fall {
-  animation: fall 1s 1s ease forwards;
-  position: relative;
-  top: -100svh;
-  opacity: 0;
-}
-</style>

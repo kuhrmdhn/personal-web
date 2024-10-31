@@ -10,7 +10,10 @@ const { isActive } = storeToRefs(store);
 
 <template>
   <header
-    :class="[isActive ? 'bg-silverWhite text-black' : 'bg-black text-silverWhite' ,'h-16 w-full duration-300 delay-200 fixed left-0 top-0 z-[9999] px-10 lg:px-20 flex justify-between items-center']"
+    :class="[
+      isActive ? 'bg-silverWhite text-black' : 'bg-black text-silverWhite',
+      'h-16 w-full duration-300 delay-200 fixed left-0 top-0 z-[9999] px-10 lg:px-20 flex justify-between items-center',
+    ]"
   >
     <Logo />
     <BurgerMenu />
