@@ -35,8 +35,9 @@
       ]"
     >
       <img
-        src="/images/profile-2.jpg"
-        class="h-full lg:h-auto lg:w-full aspect-auto"
+        src="/images/profile-2.webp"
+        class="h-full lg:h-auto aspect-auto"
+        alt="Navigation profile image"
       />
     </section>
   </div>

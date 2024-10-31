@@ -12,8 +12,8 @@ import SectionDescription from "../atoms/SectionDescription.vue";
   >
     <OnView id="contactImage" triggerId="contactImage" class="h-1/2 sm:h-full w-5/6 lg:w-2/5 flex justify-center items-center">
       <img
-        src="/images/profile-3.jpg"
-        alt="Kukuh Ardi Ramadhan Profile"
+        src="/images/profile-3.webp"
+        alt="Contact profile image"
         class="h-full sm:h-3/4 aspect-auto rounded-lg hover:scale-95 duration-300 to-right"
       />
     </OnView>

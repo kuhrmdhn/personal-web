@@ -10,7 +10,7 @@
     >
       <img
         src="/images/profile-1.webp"
-        alt="Kukuh Ardi Ramadhan Image"
+        alt="About profile image"
         class="w-4/5 grayscale hover:grayscale-0 hover:scale-105 duration-500 aspect-auto to-right"
       />
     </OnView>
