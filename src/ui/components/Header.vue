@@ -9,7 +9,7 @@ import { useVisibleElement } from "@/utils/useVisibleElement";
 const store = useActiveMenu();
 const { isActive } = storeToRefs(store);
 
-const homeViewClass = ref("");
+const homeViewClass = ref("bg-black text-silverWhite");
 const { visibleStatus } = useVisibleElement("home");
 
 watch(visibleStatus, (newStatus) => {
