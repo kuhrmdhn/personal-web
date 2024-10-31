@@ -28,15 +28,17 @@ onMounted(() => {
     id="skillList"
     class="h-full w-full flex flex-wrap items-center justify-center gap-7 overflow-hidden"
   >
-    <OnView triggerId="skillList" v-for="skill in skillLists" :key="skill.id">
-      <img
-        class="h-8 sm:h-10 w-8 sm:w-10 fall cursor-pointer hover:scale-125 duration-300 rounded-md"
-        :title="skill.name"
-        :src="skill.image"
-        :alt="skill.name"
-        :style="{ animationDelay: (skill.id + 1) * 50 + 'ms' }"
-      />
-    </OnView>
+    <li v-for="skill in skillLists" :key="skill.id">
+      <OnView triggerId="skillList">
+        <img
+          class="h-8 sm:h-10 w-8 sm:w-10 fall cursor-pointer hover:scale-125 duration-300 rounded-md"
+          :title="skill.name"
+          :src="skill.image"
+          :alt="skill.name"
+          :style="{ animationDelay: (skill.id + 1) * 50 + 'ms' }"
+        />
+      </OnView>
+    </li>
   </ul>
 </template>
 

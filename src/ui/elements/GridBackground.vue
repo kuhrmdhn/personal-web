@@ -1,6 +1,6 @@
 <template>
     <div class="w-full h-full -z-10 absolute top-0 overflow-hidden">
-        <img src="/images/grid-bg.png" class="object-cover object-center w-full h-full fade" />
+        <img src="/images/grid-bg.webp" alt="Home section grid background" class="object-cover object-center w-full h-full fade" />
     </div>
 </template>
 

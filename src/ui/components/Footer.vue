@@ -8,14 +8,15 @@
       <Logo />
       <KeqingIcon />
     </div>
-    <nav id="footerNavigation" class="w-full sm:w-1/2 h-3/5 sm:h-3/5 flex justify-evenly overflow-hidden">
-      <div
-        class="w-2/5 h-3/4 flex flex-col justify-between items-center"
-      >
+    <nav
+      id="footerNavigation"
+      class="w-full sm:w-1/2 h-3/5 sm:h-3/5 flex justify-evenly overflow-hidden"
+    >
+      <div class="w-2/5 h-3/4 flex flex-col justify-between items-center">
         <h1 class="text-xl">Navigation</h1>
-        <ul class="h-3/4 w-fit flex flex-col gap-1">
-          <OnView triggerId="footerNavigation">
-          <li v-for="nav of navigationData" :key="nav.id">
+        <OnView triggerId="footerNavigation">
+          <ul class="h-3/4 w-fit flex flex-col gap-1">
+            <li v-for="nav of navigationData" :key="nav.id">
               <NavigationItem
                 :text="nav.title"
                 :url="nav.url"
@@ -23,16 +24,16 @@
                 class="underline-white fall"
               />
             </li>
-          </OnView>
-        </ul>
+          </ul>
+        </OnView>
       </div>
       <div
         class="w-2/5 h-3/4 flex flex-col justify-between items-center overflow-hidden"
       >
         <h1 class="text-xl">Contact Me</h1>
-        <ul class="h-3/4 w-fit flex flex-col gap-1">
-          <OnView triggerId="footerNavigation">
-          <li v-for="media of SocialMediaData" :key="media.id">
+        <OnView triggerId="footerNavigation">
+          <ul class="h-3/4 w-fit flex flex-col gap-1">
+            <li v-for="media of SocialMediaData" :key="media.id">
               <NavigationItem
                 :text="media.title"
                 :url="media.url"
@@ -40,8 +41,8 @@
                 :style="{ animationDelay: media.id * 100 + 'ms' }"
               />
             </li>
-          </OnView>
-        </ul>
+          </ul>
+        </OnView>
       </div>
     </nav>
   </footer>
