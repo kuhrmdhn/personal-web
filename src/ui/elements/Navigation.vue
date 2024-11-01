@@ -2,8 +2,8 @@
   <div
     id="navigation"
     :class="[
-      'fixed z-20 bg-silverWhite h-[100svh] w-full left-0 pt-16 duration-500 flex flex-col sm:flex-row justify-end sm:justify-around lg:justify-center items-center',
-      isActive ? 'top-0' : '-top-[100svh]',
+      'fixed z-20 bg-silverWhite h-[100dvh] w-full left-0 pt-16 duration-500 flex flex-col sm:flex-row justify-end sm:justify-around lg:justify-center items-center',
+      isActive ? 'top-0' : '-top-[200dvh]',
     ]"
   >
     <nav class="h-1/2 lg:h-3/5 w-5/6 sm:w-1/3 pl-7 relative flex">
