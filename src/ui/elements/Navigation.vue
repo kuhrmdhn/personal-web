@@ -2,7 +2,7 @@
   <div
     id="navigation"
     :class="[
-      'fixed z-20 bg-silverWhite h-[100svh] w-full left-0 pt-16 duration-500 flex flex-col sm:flex-row justify-end sm:justify-around lg:justify-center items-center',
+      'fixed z-20 bg-silverWhite h-[100dvh] w-full left-0 pt-16 duration-500 flex flex-col sm:flex-row justify-end sm:justify-around lg:justify-center items-center',
       isActive ? 'top-0' : '-top-[100svh]',
     ]"
   >
