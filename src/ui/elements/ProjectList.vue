@@ -1,7 +1,7 @@
 <template>
   <section
     id="projectList"
-    class="h-4/5 w-full flex gap-7 items-center overflow-x-auto lg:py-7 px-4 sm:px-10 project-list"
+    class="h-4/5 w-full flex gap-7 items-center overflow-x-auto lg:py-7 px-4 sm:px-10"
   >
     <OnView
       triggerId="projectList"
