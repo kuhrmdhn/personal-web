@@ -2,7 +2,7 @@
   <div
     v-bind="$attrs"
     :class="[
-      'h-80 sm:h-96 w-72 sm:w-80 p-2 flex-none bg-white border-2 border-gray-100 shadow-md rounded-md flex flex-col justify-between hover:shadow-lg duration-300',
+      'h-80 sm:h-96 w-72 sm:w-80 p-2 flex-none bg-white border-2 border-gray-100 shadow-md rounded-md flex flex-col justify-between hover:shadow-lg duration-300 project-card',
       ,
       customClass,
     ]"
@@ -57,3 +57,9 @@ const { projectData, customClass } = defineProps<{
 }>();
 const { name, image, description, stacks, demo_url, github_url } = projectData;
 </script>
+
+<style scoped>
+.project-card:hover {
+  transform: scale(105%)
+}
+</style>
