@@ -4,7 +4,7 @@ export interface NavigationType {
     url: string
 }
 
-export const navigationData:NavigationType[] = [
+export const navigationData: NavigationType[] = [
     {
         id: 1,
         title: "Home",
@@ -22,11 +22,16 @@ export const navigationData:NavigationType[] = [
     },
     {
         id: 4,
+        title: "Academic",
+        url: "#academic"
+    },
+    {
+        id: 5,
         title: "Project",
         url: "#project"
     },
     {
-        id: 5,
+        id: 6,
         title: "Contact",
         url: "#contact"
     },
