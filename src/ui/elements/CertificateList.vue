@@ -1,23 +1,26 @@
 <template>
-  <div class="h-full w-full lg:w-[40svw] flex flex-col gap-5">
+  <div class="h-full w-full lg:w-[40svw] flex flex-col gap-5 overflow-y-hidden">
     <OnView id="certificateHeading" triggerId="certificateHeading">
       <SectionHeading custom-class="!text-xl lg:!text-3xl text-center flip">
         Certificate
       </SectionHeading>
     </OnView>
-    <div id="certificateList" class="w-full h-fit flex flex-col items-center gap-4">
-      <OnView
-        trigger-id="certificateList"
-        v-for="certificate in certificateData"
-        :key="certificate.id"
-      >
-        <CertificateItem
-          custom-class="fall"
-          :style="{ animationDelay: certificate.id * 100 + 'ms' }"
-          :title="certificate.title"
-          :credentials-url="certificate.credential_url"
-        />
-      </OnView>
+    <div
+      id="certificateList"
+      class="w-full h-fit flex flex-col items-center gap-4"
+    >
+      <ul>
+        <li v-for="certificate in certificateData" :key="certificate.id">
+          <OnView trigger-id="certificateList">
+            <CertificateItem
+              custom-class="fall"
+              :style="{ animationDelay: certificate.id * 100 + 'ms' }"
+              :title="certificate.title"
+              :credentials-url="certificate.credential_url"
+            />
+          </OnView>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
