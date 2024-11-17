@@ -1,5 +1,5 @@
 <template>
-  <div class="relative pl-3 lg:pl-10 py-3 lg:py-5 border-l-4 border-black">
+  <div :class="['relative pl-3 lg:pl-10 py-3 lg:py-5 border-l-4 border-black', customClass]">
     <span
       class="absolute h-5 w-5 rounded-full bg-white border-4 border-black -top-2 -left-3"
     ></span>
@@ -12,8 +12,9 @@
 <script setup lang="ts">
 import { SchoolEducation } from "@/constant/schoolEducation";
 
-const { educationData } = defineProps<{
+const { educationData, customClass } = defineProps<{
   educationData: SchoolEducation;
+  customClass?: string;
 }>();
 
 const { schoolName, major, duration } = educationData;
