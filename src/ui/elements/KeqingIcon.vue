@@ -4,7 +4,7 @@
       muted
       loop
       autoplay
-      src="/video/keqing.mp4"
+      src="/video/keqing-comp.mp4"
       class="w-full overflow-hidden"
     />
   </div>

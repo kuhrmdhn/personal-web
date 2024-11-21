@@ -35,6 +35,7 @@
       ]"
     >
       <img
+        loading="lazy"
         src="/images/profile-2.webp"
         class="h-full lg:h-auto aspect-auto"
         alt="Navigation profile image"
