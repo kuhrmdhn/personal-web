@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import OnView from "../atoms/OnView.vue";
-import SectionHeading from "../atoms/SectionHeading.vue";
-import ProjectList from "../elements/ProjectList.vue";
-</script>
-
 <template>
   <section
     id="project"
@@ -15,3 +9,9 @@ import ProjectList from "../elements/ProjectList.vue";
     <ProjectList />
   </section>
 </template>
+
+<script setup lang="ts">
+import OnView from "../atoms/OnView.vue";
+import SectionHeading from "../atoms/SectionHeading.vue";
+import ProjectList from "../elements/ProjectList.vue";
+</script>

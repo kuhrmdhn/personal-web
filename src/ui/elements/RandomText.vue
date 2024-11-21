@@ -1,3 +1,9 @@
+<template>
+    <div>
+        <h1>{{ displayText }}</h1>
+    </div>
+</template>
+
 <script setup>
 import { ref, onMounted } from 'vue';
 
@@ -41,10 +47,3 @@ function randomText() {
 }
 onMounted(() => randomText())
 </script>
-
-
-<template>
-    <div>
-        <h1>{{ displayText }}</h1>
-    </div>
-</template>

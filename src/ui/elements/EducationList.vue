@@ -1,10 +1,3 @@
-<script setup lang="ts">
-import { schoolEducation } from "@/constant/schoolEducation";
-import EducationItem from "../atoms/EducationItem.vue";
-import SectionHeading from "../atoms/SectionHeading.vue";
-import OnView from "../atoms/OnView.vue";
-</script>
-
 <template>
   <div class="w-full lg:w-[40svw] h-fit flex flex-col gap-5 overflow-y-hidden">
     <OnView id="educationHeading" triggerId="educationHeading">
@@ -24,3 +17,10 @@ import OnView from "../atoms/OnView.vue";
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { schoolEducation } from "@/constant/schoolEducation";
+import EducationItem from "../atoms/EducationItem.vue";
+import SectionHeading from "../atoms/SectionHeading.vue";
+import OnView from "../atoms/OnView.vue";
+</script>

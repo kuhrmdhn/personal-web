@@ -1,10 +1,3 @@
-<script setup>
-import OnView from "../atoms/OnView.vue";
-import SectionDescription from "../atoms/SectionDescription.vue";
-import SectionHeading from "../atoms/SectionHeading.vue";
-import SkillList from "../elements/SkillList.vue";
-</script>
-
 <template>
   <section
     id="skill"
@@ -26,3 +19,10 @@ import SkillList from "../elements/SkillList.vue";
     </div>
   </section>
 </template>
+
+<script setup>
+import OnView from "../atoms/OnView.vue";
+import SectionDescription from "../atoms/SectionDescription.vue";
+import SectionHeading from "../atoms/SectionHeading.vue";
+import SkillList from "../elements/SkillList.vue";
+</script>

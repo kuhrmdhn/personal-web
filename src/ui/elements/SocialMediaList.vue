@@ -1,9 +1,3 @@
-<script setup>
-import { SocialMediaData } from "@/constant/socialMedia";
-import OnView from "../atoms/OnView.vue";
-import SocialMediaIcon from "../atoms/SocialMediaIcon.vue";
-</script>
-
 <template>
   <div id="contactList" class="h-24 w-full">
     <ul class="flex gap-7 items-center h-full w-full overflow-hidden pl-5">
@@ -19,6 +13,12 @@ import SocialMediaIcon from "../atoms/SocialMediaIcon.vue";
     </ul>
   </div>
 </template>
+
+<script setup>
+import { SocialMediaData } from "@/constant/socialMedia";
+import OnView from "../atoms/OnView.vue";
+import SocialMediaIcon from "../atoms/SocialMediaIcon.vue";
+</script>
 
 <style scoped>
 .to-right {

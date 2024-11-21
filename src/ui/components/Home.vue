@@ -1,8 +1,3 @@
-<script setup>
-import GridBackground from "../elements/GridBackground.vue";
-import RandomText from "../elements/RandomText.vue";
-</script>
-
 <template>
   <section
     id="home"
@@ -15,3 +10,8 @@ import RandomText from "../elements/RandomText.vue";
     <GridBackground />
   </section>
 </template>
+
+<script setup>
+import GridBackground from "../elements/GridBackground.vue";
+import RandomText from "../elements/RandomText.vue";
+</script>

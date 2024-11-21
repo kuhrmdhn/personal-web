@@ -1,26 +1,30 @@
+<template>
+  <a
+    :href="props.url"
+    :class="['navigation-hover', props.class]"
+    v-bind="$attrs"
+  >
+    {{ props.text }}
+  </a>
+</template>
+
 <script setup>
 const props = defineProps({
-    text: {
-        required: true,
-        type: String
-    },
-    url: {
-        required: true,
-        type: String
-    },
-    class: String,
-    isVisible: {
-        default: true,
-        type: Boolean
-    }
+  text: {
+    required: true,
+    type: String,
+  },
+  url: {
+    required: true,
+    type: String,
+  },
+  class: String,
+  isVisible: {
+    default: true,
+    type: Boolean,
+  },
 });
 </script>
-
-<template>
-    <a :href="props.url" :class="['navigation-hover', props.class]" v-bind="$attrs">
-      {{ props.text }}
-    </a>
-</template>
 
 <style scoped>
 .navigation-hover {
@@ -34,7 +38,7 @@ const props = defineProps({
   position: absolute;
   background: var(--underline-color, #000);
   transition-duration: 300ms;
-  bottom: var(--underline-offset,-8px);
+  bottom: var(--underline-offset, -8px);
   left: 50%;
   transform: translateX(-50%);
 }
