@@ -3,121 +3,124 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Montserrat";
-    src: url(../fonts/Montserrat-Regular.ttf);
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Regular.ttf);
 }
 
-*, html, body {
-    font-family: "Montserrat";
-    scroll-behavior: smooth;
+*,
+html,
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
-*::-webkit-scrollbar, html::-webkit-scrollbar {
-    width: 0;
+*::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: 0;
 }
 
 .flip {
-    animation: flip 300ms ease-in-out 300ms forwards;
+  animation: flip 300ms ease-in-out 300ms forwards;
+  transform: rotateX(90deg);
+  opacity: 0;
+  -webkit-animation: flip 300ms ease-in-out 300ms forwards;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+}
+
+.to-right {
+  animation: toRight 1s ease-in-out 300ms forwards;
+  position: relative;
+  left: -100svw;
+  -webkit-animation: toRight 1s ease-in-out 300ms forwards;
+}
+
+.fall {
+  animation: fall 1s ease 300ms forwards;
+  position: relative;
+  top: -100svh;
+  opacity: 0;
+  -webkit-animation: fall 1s ease 300ms forwards;
+}
+
+.to-up {
+  position: relative;
+  animation: toUp 400ms ease-in-out forwards;
+  animation-delay: var(--to-up-delay, 350ms);
+  bottom: -100svh;
+  opacity: 0;
+  -webkit-animation: toUp 400ms ease-in-out forwards;
+}
+
+@keyframes toUp {
+  0% {
+    bottom: -100svh;
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fall {
+  0% {
+    top: -100svh;
+    opacity: 0;
+  }
+
+  60% {
+    top: 5svh;
+    opacity: 1;
+  }
+
+  80% {
+    top: -2svh;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes toRight {
+  0% {
+    left: -100svw;
+  }
+
+  60% {
+    left: 1svw;
+  }
+
+  80% {
+    left: -1svw;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes flip {
+  0% {
     transform: rotateX(90deg);
     opacity: 0;
-    -webkit-animation: flip 300ms ease-in-out 300ms forwards;
     -webkit-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);
     -ms-transform: rotateX(90deg);
     -o-transform: rotateX(90deg);
-}
+  }
 
-.to-right {
-    animation: toRight 1s ease-in-out 300ms forwards;
-    position: relative;
-    left: -100svw;
-    -webkit-animation: toRight 1s ease-in-out 300ms forwards;
-}
-
-.fall {
-    animation: fall 1s ease 300ms forwards;
-    position: relative;
-    top: -100svh;
-    opacity: 0;
-    -webkit-animation: fall 1s ease 300ms forwards;
-}
-
-.to-up {
-    position: relative;
-    animation: toUp 400ms ease-in-out forwards;
-    animation-delay: var(--to-up-delay, 350ms);
-    bottom: -100svh;
-    opacity: 0;
-    -webkit-animation: toUp 400ms ease-in-out forwards;
-}
-
-@keyframes toUp {
-    0% {
-        bottom: -100svh;
-    }
-
-    100% {
-        bottom: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes fall {
-    0% {
-        top: -100svh;
-        opacity: 0;
-    }
-
-    60% {
-        top: 5svh;
-        opacity: 1;
-    }
-
-    80% {
-        top: -2svh;
-        opacity: 1;
-    }
-
-    100% {
-        top: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes toRight {
-    0% {
-        left: -100svw;
-    }
-
-    60% {
-        left: 1svw;
-    }
-
-    80% {
-        left: -1svw;
-    }
-
-    100% {
-        left: 0;
-    }
-}
-
-@keyframes flip {
-    0% {
-        transform: rotateX(90deg);
-        opacity: 0;
-        -webkit-transform: rotateX(90deg);
-        -moz-transform: rotateX(90deg);
-        -ms-transform: rotateX(90deg);
-        -o-transform: rotateX(90deg);
-    }
-
-    100% {
-        transform: rotateX(0);
-        -webkit-transform: rotateX(0);
-        -moz-transform: rotateX(0);
-        -ms-transform: rotateX(0);
-        -o-transform: rotateX(0);
-        opacity: 1;
-    }
+  100% {
+    transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+    -moz-transform: rotateX(0);
+    -ms-transform: rotateX(0);
+    -o-transform: rotateX(0);
+    opacity: 1;
+  }
 }
