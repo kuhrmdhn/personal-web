@@ -1,13 +1,26 @@
-import { ref, onMounted, onBeforeUnmount, watch } from "vue";
+import {
+  ref,
+  onMounted,
+  onBeforeUnmount,
+  watch
+} from "vue";
 
 export const useVisibleElement = (elementId) => {
   const visibleStatus = ref(false);
 
   const checkVisibility = () => {
     const element = document.getElementById(elementId);
+    if (visibleStatus.value) {
+      return visibleStatus.value = true
+    }
     if (element) {
-      const { top, bottom } = element.getBoundingClientRect();
-      const { innerHeight } = window;
+      const {
+        top,
+        bottom
+      } = element.getBoundingClientRect();
+      const {
+        innerHeight
+      } = window;
       visibleStatus.value =
         (top >= 0 && top <= innerHeight) ||
         (bottom >= 0 && bottom <= innerHeight) ||
@@ -23,5 +36,7 @@ export const useVisibleElement = (elementId) => {
   onBeforeUnmount(() => {
     window.removeEventListener("scroll", checkVisibility);
   });
-  return { visibleStatus };
+  return {
+    visibleStatus
+  };
 };
