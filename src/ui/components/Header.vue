@@ -22,7 +22,7 @@ const store = useActiveMenu();
 const { isActive } = storeToRefs(store);
 
 const homeViewClass = ref("bg-black text-silverWhite");
-const { visibleStatus } = useVisibleElement("home");
+const { visibleStatus } = useVisibleElement("home", true);
 
 watch(visibleStatus, (newStatus) => {
   homeViewClass.value = newStatus 

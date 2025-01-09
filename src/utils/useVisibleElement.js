@@ -1,42 +1,42 @@
-import {
-  ref,
-  onMounted,
-  onBeforeUnmount,
-  watch
-} from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
-export const useVisibleElement = (elementId) => {
+export const useVisibleElement = (elementId, reAnimation = false) => {
   const visibleStatus = ref(false);
-
-  const checkVisibility = () => {
-    const element = document.getElementById(elementId);
-    if (visibleStatus.value) {
-      return visibleStatus.value = true
-    }
-    if (element) {
-      const {
-        top,
-        bottom
-      } = element.getBoundingClientRect();
-      const {
-        innerHeight
-      } = window;
-      visibleStatus.value =
-        (top >= 0 && top <= innerHeight) ||
-        (bottom >= 0 && bottom <= innerHeight) ||
-        (top < 0 && bottom > innerHeight);
-    }
-  };
+  let observer = null;
 
   onMounted(() => {
-    window.addEventListener("scroll", checkVisibility);
-    checkVisibility();
+    const target = document.getElementById(elementId);
+
+    if (!target) {
+      console.warn(`Element with id "${elementId}" not found.`);
+      return;
+    }
+
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+
+          if (!reAnimation && visibleStatus.value && entry.isIntersecting) {
+            return;
+          }
+          visibleStatus.value = entry.isIntersecting;
+        });
+      },
+      {
+        root: null,
+        threshold: 0.05,
+        rootMargin: "0px",
+      }
+    );
+
+    observer.observe(target);
   });
 
   onBeforeUnmount(() => {
-    window.removeEventListener("scroll", checkVisibility);
+    if (observer) {
+      observer.disconnect();
+    }
   });
-  return {
-    visibleStatus
-  };
+
+  return { visibleStatus };
 };
