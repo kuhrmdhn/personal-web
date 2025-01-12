@@ -15,8 +15,7 @@ export const useVisibleElement = (elementId, reAnimation = false) => {
     observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-
-          if (!reAnimation && visibleStatus.value && entry.isIntersecting) {
+          if (!reAnimation && visibleStatus.value) {
             return;
           }
           visibleStatus.value = entry.isIntersecting;
